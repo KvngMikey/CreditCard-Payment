@@ -1,0 +1,25 @@
+.container {
+  margin-top: 30px;
+  display: block;
+}
+input.ng-invalid.ng-touched.ng-dirty {
+  border: 1px solid red;
+}
+
+label,
+p,
+h3 {
+  color: white;
+}
+
+.form-style {
+  background-color: rgb(4, 4, 61);
+}
+
+.help-block {
+  color: red;
+}
+
+.btn {
+  cursor: pointer;
+}

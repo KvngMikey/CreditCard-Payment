@@ -1,0 +1,51 @@
+<div class="container">
+	<div class="row">
+    <div class= "row_a">
+    <h1>Click on button to make Payment</h1>
+			<button class="btn btn-primary" routerLink="/payment"> Make a payment</button>
+  </div>
+</div>
+
+
+  <div class="row">
+		<div class="column">
+			<router-outlet></router-outlet>
+		</div>
+		</div>
+
+  <div class= "row_b">
+    <h1>Cards History</h1>
+
+  <ul class="list-group">
+    <li
+    *ngFor="let card of cards | async; let i = index"
+    class="list-group-item">
+<div (click)= "showToggle(i)">
+
+  <div class= "CardHolderNameDiv">
+      <h3>Card Holder Name: </h3>
+      <p>{{card.CardHolder}}</p>
+    </div>
+    <div *ngIf="show === i"  id="divshow" >
+        <div class="HiddenClassCol">
+      <h3>Credit Card Number: </h3>
+      <p>{{card.CreditCardNumber}}</p>
+    </div>
+        <div class="HiddenClassCol">
+        <h3>Expiration Date: </h3>
+       <p>{{card.ExpirationDate}}</p>
+      </div>
+        <div class="HiddenClassCol">
+        <h3>Security Code: </h3>
+       <p>{{card.SecurityCode}}</p>
+      </div>
+        <div class="HiddenClassCol">
+        <h3>Amount: </h3>
+       <p>{{card.Amount}}</p>
+      </div>
+     </div>
+    </div>
+</li>
+</ul>
+	</div>
+</div>

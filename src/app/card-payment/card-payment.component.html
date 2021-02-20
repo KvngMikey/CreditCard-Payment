@@ -1,0 +1,71 @@
+<div class="container">
+	<div class="row form-style">
+		<div class="col-xs-12">
+			<h3>Add a Payment Method</h3>
+			<p><i class="fa fa-credit-card" aria-hidden="true"></i>  Add your credit card</p>
+			<form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+				<div class="row">
+					<div class="col-sm-5 form-group">
+						<label for="number">Credit Card Number</label>
+						<input type="text"
+						id="CreditCardNumber"
+						class="form-control"
+						placeholder="0123456789"
+						formControlName = "CreditCardNumber">
+						<div class="help-block" *ngIf="!formControls.CreditCardNumber.valid && (formControls.CreditCardNumber.touched || formControls.CreditCardNumber.dirty)">Credit Card Number, 16 digits required!</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 form-group">
+						<label for="name">Card Holder</label>
+						<input type="text"
+						id="CardHolder"
+						class="form-control"
+						placeholder="John Doe"
+						formControlName = "CardHolder">
+						<div class="help-block" *ngIf="!formControls.CardHolder.valid && (formControls.CardHolder.touched || formControls.CardHolder.dirty)">Your Name!</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 form-group">
+						<label for="date">Expiration Date</label>
+						<input type="date"
+						id="ExpirationDate"
+						class="form-control"
+						formControlName = "ExpirationDate">
+						<div class="help-block" *ngIf="!formControls.ExpirationDate.valid && (formControls.ExpirationDate.touched || formControls.ExpirationDate.dirty)">Choose Date</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 form-group">
+						<label for="ccv">CCV</label>
+						<input type="text"
+						id="SecurityCode"
+						class="form-control"
+						placeholder="123"
+						formControlName = "SecurityCode">
+						<div class="help-block" *ngIf="!formControls.SecurityCode.valid && (formControls.SecurityCode.touched || formControls.SecurityCode.dirty)">3 digits required</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 form-group">
+						<label for="amount">Amount</label>
+						<input type="number"
+						id="Amount"
+						class="form-control"
+						placeholder="0"
+						formControlName = "Amount">
+						<div class="help-block" *ngIf="!formControls.Amount.valid && (formControls.Amount.touched || formControls.Amount.dirty)">Please enter valid amount</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<button type="submit" class="btn btn-success" [disabled]="!paymentForm.valid">Proceed</button>
+					</div>
+				</div>
+				<br>
+				<div *ngIf="paymentForm.invalid" class="alert alert-danger">{{errorMessage}}</div>
+			</form>
+		</div>
+	</div>
+</div>

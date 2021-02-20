@@ -1,0 +1,62 @@
+.container {
+  display: block;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  background-color: rgb(64, 214, 199);
+}
+
+.row_a {
+  padding-top: 3vw;
+  display: block;
+  text-align: center;
+}
+
+.list-group-item {
+  margin-bottom: 20px;
+}
+
+.row_a button {
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 25px;
+  margin: 10px;
+  font-weight: 600;
+}
+
+.row_b {
+  padding-top: 3vw;
+  text-align: center;
+}
+
+.row_b ul {
+  font-size: 15px;
+  text-align: left;
+  font-weight: 400;
+  list-style-type: none;
+  margin: 0;
+}
+
+.column {
+  width: 50%;
+}
+
+.CardHolderNameDiv {
+  display: flex;
+}
+
+.HiddenClassCol {
+  display: flex;
+}
+
+h3 {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+p {
+  margin: 10px;
+  font-size: 20px;
+}
